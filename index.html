@@ -20,14 +20,43 @@
                         <img src="https://i.imgur.com/uZjRNku.jpg" alt="Image 3">
                     </div>
                 '>Home</li>
-                <li class="menu-item" data-content="Detailed profiles of each character, including their background, abilities, and stats.">Characters</li>
+                <li class="menu-item" data-content='
+                    <h2>Characters</h2>
+                    <div class="characters-container">
+                        <div class="character">
+                            <img src="https://imgur.com/jqTX5qz.jpg" alt="The Popstar Bard">
+                            <div class="character-caption">The Popstar Bard</div>
+                        </div>
+                        <div class="character druid">
+                            <img src="https://imgur.com/LLDOQxP.jpg" alt="The Awkward Druid">
+                            <div class="character-caption">The Awkward Druid</div>
+                        </div>
+                        <div class="character">
+                            <img src="https://imgur.com/6BgCuQm.jpg" alt="The Romantic Wizard">
+                            <div class="character-caption">The Romantic Wizard</div>
+                        </div>
+                    </div>
+                '>Characters</li>
                 <li class="menu-item" data-content="Summaries of the campaigns or adventures the characters have been a part of.">Storylines</li>
                 <li class="menu-item" data-content="Information about the world your characters inhabit, including maps, locations, and key NPCs (Non-Player Characters).">World Building</li>
                 <li class="menu-item" data-content="Galleries of character art, fan art, and other visual representations.">Artwork</li>
                 <li class="menu-item" data-content="Updates on ongoing campaigns, character development, and reflections on sessions.">Journal/Blog</li>
                 <li class="menu-item" data-content="Downloadable content like character sheets, homebrew rules, and custom items.">Resources</li>
-                <li class="menu-item" data-content="Information about you, the creator, and your journey in D&D.">About</li>
-                <li class="menu-item" data-content="A way for visitors to get in touch with you, whether for collaborations, feedback, or questions.">Contact</li>
+                <li class="menu-item" data-content="<h2>About</h2><p>I first dipped my toes into Dungeons & Dragons (DnD) during college, but could never really stick to it. Learning so much of the mechanics felt incredibly overwhelming at the time. Throughout the years since, I gave it a try - but never found the right spark. My interest reignited with the release of Baldur's Gate 3, and I stumbled upon shows like Dimension 20, which turned the game into an epic comedy-adventure series.</p><p>After years of being in improv, I learnt that when it came to DnD, improv and voice acting became my secret weapons. DnD became much like improv in so many ways - you create scenes on the fly, challenge yourself to develop your character, and react to unexpected twists, just like in an improv skit. Shows like Dimension 20 on Dropout.tv demonstrated how hilarious and engaging DnD could be with a bit of spontaneity and a lot of laughter. I took a lot of the lead to mix the two passions and to eventually create fun, engaging stories and characters that many people enjoyed.</p><p>Improv and voice acting became my secret weapons. Improvisation isn't just for comedy clubs; it's the lifeblood of DnD. You create scenes on the fly, develop characters, and react to unexpected twists, just like in an improv skit. Shows like Dimension 20 on Dropout.tv demonstrated how hilarious and engaging DnD could be with a bit of spontaneity and a lot of laughter.</p><p>Since then, I have done 'yes, and...' to whatever came my way - involving creating and refining the character through adventures. I accepted whatever was happening in the scene and built on it. Get ambushed by goblins while trying to buy groceries? Yes, I guess my character is going to find out whether or not they're dangerous with a loaf of bread as a weapon!</p><p>I also adore attempting voice acting as well to add a layer of depth to characters. Giving your rogue a gravelly voice or your sorcerer a posh accent makes them more memorable and engaging. It's a lot of fun to see your friends' reactions when your meek cleric suddenly belts out a battle cry.</p><p>In the end, DnD allows you to make characters that are more than just stats on a sheet; they're living, breathing parts of a shared story. I'm very grateful that improv helped me see how I could find a way to bring these characters to life.</p>">About</li>
+                <li class="menu-item" data-content='
+                    <h2>Contact Us</h2>
+                    <form action="send_email.php" method="POST" class="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                '>Contact</li>
             </ul>
         </div>
         <div class="main-content">
