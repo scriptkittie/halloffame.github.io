@@ -1,0 +1,231 @@
+body {
+    font-family: 'IM Fell English SC', serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.imgur.com/1e4IKP5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Ensure positioning context for the dice image */
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Uncial Antiqua', cursive;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Enhanced drop shadow */
+}
+
+/* Paragraphs and other body text */
+p {
+    font-family: 'IM Fell English SC', serif;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Enhanced drop shadow */
+}
+
+/* Menu items */
+.menu-item {
+    font-family: 'IM Fell English SC', serif;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Enhanced drop shadow */
+}
+
+.content-container, #blurb {
+    font-family: 'IM Fell English SC', serif;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Enhanced drop shadow */
+}
+
+/* Existing styles */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative; /* Ensure positioning context for the dice image */
+}
+
+.menu-container {
+    background-color: rgba(40, 70, 56, 0.8);
+    width: 240px; 
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+    height: 376px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative; 
+    overflow: hidden;
+    border: 6px double #2F4727; /* Outer border color */
+    border-color: #2F4727 #2B3A15; /* Double border color */
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.menu-item {
+    padding: 8px 10px; /* Reduced padding to fit better */
+    margin: 5px 0;
+    background-color: #2B4D3E;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text */
+}
+
+.menu-item:hover {
+    background-color: #52826B;
+}
+
+/* Different hover colors for each menu item */
+.menu-item:nth-child(1):hover {
+    background-color: #C5CEB6;
+}
+.menu-item:nth-child(2):hover {
+    background-color: #B0A36F;
+}
+.menu-item:nth-child(3):hover {
+    background-color: #88A28D;
+}
+.menu-item:nth-child(4):hover {
+    background-color: #52826B;
+}
+.menu-item:nth-child(5):hover {
+    background-color: #686A30;
+}
+.menu-item:nth-child(6):hover {
+    background-color: #2F4727;
+}
+.menu-item:nth-child(7):hover {
+    background-color: #1F3C2F;
+}
+.menu-item:nth-child(8):hover {
+    background-color: #2B3A15;
+}
+.menu-item:nth-child(9):hover {
+    background-color: #0F220C;
+}
+
+.main-content {
+    width: 75%; /* Rest of the screen */
+    display: flex;
+    flex-direction: column; /* Ensure header and content container stack vertically */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start; /* Align the header and content container to the start */
+    align-items: center; /* Center the contents horizontally */
+    position: relative;
+}
+
+.dice-image {
+    width: 120px; /* Adjusted size for the dice image */
+    height: auto;
+    position: absolute;
+    top: 60px; /* Adjust this value to control the spacing */
+    left: 58%;
+    transform: translateX(-50%);
+}
+
+.header {
+    background-color: rgba(40, 70, 56, 0.9);
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-sizing: border-box; 
+    position: relative; 
+    overflow: hidden;
+    border: 6px double #88A28D; /* Outer border color */
+    border-color: #88A28D #2B4D3E; /* Double border color */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.content-container {
+    background-color: rgba(50, 50, 50, 0.9);
+    width: 100%; 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; 
+    flex-grow: 1; 
+    overflow-y: auto; 
+    position: relative; 
+    height: 500px; 
+    overflow: hidden;
+    border: 6px double #1F3C2F; /* Outer border color */
+    border-color: #1F3C2F #10291C; /* Double border color */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Space out images slightly close together */
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    right: 10px; /* Position at the right */
+}
+
+.image-container img {
+    max-width: 120px; /* Adjust this value to change the image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-left: 5px; /* Adjust this value to change the space between images */
+}
+
+#blurb {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 200px;
+    z-index: 1000;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Custom scrollbar styles for content-container */
+.content-container::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.content-container::-webkit-scrollbar-track {
+    background: rgba(40, 70, 56, 0.9); /* Track color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.content-container::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, 0.8); /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Custom scrollbar styles for blurb */
+#blurb::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+#blurb::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8); /* Track color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#blurb::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, 0.8); /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
