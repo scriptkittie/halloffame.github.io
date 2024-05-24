@@ -71,3 +71,19 @@ document.addEventListener('DOMContentLoaded', function() {
         addFormSubmissionHandler();
     }
 });
+
+// Smooth transition for character images
+document.querySelectorAll('.character a').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = href;
+        }, 1000); // Increased duration to make it more noticeable
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('fade-in');
+});
