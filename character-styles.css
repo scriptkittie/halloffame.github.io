@@ -210,3 +210,8 @@ body.fade-in {
     opacity: 1;
     transition: opacity 0.5s ease-in;
 }
+
+.indented {
+    text-indent: 2em; /* Adjust the indent size as needed */
+    margin-bottom: 1em; /* Optional: Add some space between paragraphs */
+}
