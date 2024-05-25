@@ -14,6 +14,12 @@ document.querySelectorAll('.menu-item').forEach(item => {
         if (contactForm) {
             addFormSubmissionHandler();
         }
+
+        // Update the URL hash
+        const id = this.id || '';
+        if (id) {
+            window.location.hash = id;
+        }
     });
 
     item.addEventListener('mouseover', function() {
@@ -86,4 +92,13 @@ document.querySelectorAll('.character a').forEach(link => {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('fade-in');
+
+    // Handle URL hash on page load
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        const menuItem = document.getElementById(hash);
+        if (menuItem) {
+            menuItem.click();
+        }
+    }
 });
