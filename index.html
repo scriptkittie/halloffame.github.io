@@ -20,8 +20,8 @@
                         <img src="https://i.imgur.com/uZjRNku.jpg" alt="Image 3">
                     </div>
                 '>Home</li>
-                <li class="menu-item" id="characters" data-content='
-                    <h2>Characters</h2>
+                <li class="menu-item" data-content='
+                    <h2 id="characters">Characters</h2>
                     <div class="characters-container">
                         <div class="character">
                             <a href="taylortheswift.html">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 '>Characters</li>
-                <li class="menu-item" data-content="Summaries of the campaigns or adventures the characters have been a part of.">Storylines</li>
+                <li class="menu-item" data-content="Summaries of the campaigns or adventures the characters have been a part of. -- UNDER CONSTRUCTION">Storylines</li>
                 <li class="menu-item" data-content='
                     <h2>World Building</h2>
                     <div class="world-building-container">
@@ -199,8 +199,20 @@
                         </div>
                     </div>
                 '>World Building</li>
-                <li class="menu-item" data-content="Galleries of character art, fan art, and other visual representations.">Artwork</li>
-                <li class="menu-item" data-content="Updates on ongoing campaigns, character development, and reflections on sessions.  Under construction!">Journal/Blog</li>
+                <li class="menu-item" data-content='
+                    <h2>Artwork</h2>
+                    <div class="artwork-container">
+                        <a href="https://i.imgur.com/qlEAxCi.png" target="_blank"><img src="https://i.imgur.com/qlEAxCi.png" alt="Artwork 1"></a>
+                        <a href="https://i.imgur.com/jChcc3n.png" target="_blank"><img src="https://i.imgur.com/jChcc3n.png" alt="Artwork 2"></a>
+                        <a href="https://i.imgur.com/RPszddX.png" target="_blank"><img src="https://i.imgur.com/RPszddX.png" alt="Artwork 3"></a>
+                        <a href="https://i.imgur.com/9s4w3Ai.png" target="_blank"><img src="https://i.imgur.com/9s4w3Ai.png" alt="Artwork 4"></a>
+                        <a href="https://i.imgur.com/TvIsl5S.png" target="_blank"><img src="https://i.imgur.com/TvIsl5S.png" alt="Artwork 5"></a>
+                        <a href="https://i.imgur.com/aI0171P.png" target="_blank"><img src="https://i.imgur.com/aI0171P.png" alt="Artwork 6"></a>
+                        <a href="https://i.imgur.com/jujLynW.png" target="_blank"><img src="https://i.imgur.com/jujLynW.png" alt="Artwork 7"></a>
+                        <a href="https://i.imgur.com/TVtETMo.png" target="_blank"><img src="https://i.imgur.com/TVtETMo.png" alt="Artwork 8"></a>
+                    </div>
+                '>Artwork</li>
+                <li class="menu-item" data-content="Updates on ongoing campaigns, character development, and reflections on sessions. -- UNDER CONSTRUCTION!">Journal/Blog</li>
                 <li class="menu-item" data-content='
     <h2>Resources</h2>
     <div class="resources-section">
@@ -262,7 +274,7 @@
                 <li class="menu-item" data-content="<h2>About</h2><p>I first dipped my toes into Dungeons & Dragons (DnD) during college, but could never really stick to it. Learning so much of the mechanics felt incredibly overwhelming at the time. Throughout the years since, I gave it a try - but never found the right spark. My interest reignited with the release of Baldur's Gate 3, and I stumbled upon shows like Dimension 20, which turned the game into an epic comedy-adventure series.</p><p>After years of being in improv, I learnt that when it came to DnD, improv and voice acting became my secret weapons. DnD became much like improv in so many ways - you create scenes on the fly, challenge yourself to develop your character, and react to unexpected twists, just like in an improv skit. Shows like Dimension 20 on Dropout.tv demonstrated how hilarious and engaging DnD could be with a bit of spontaneity and a lot of laughter. I took a lot of the lead to mix the two passions and to eventually create fun, engaging stories and characters that many people enjoyed.</p><p>Improv and voice acting became my secret weapons. Improvisation isn't just for comedy clubs; it's the lifeblood of DnD. You create scenes on the fly, develop characters, and react to unexpected twists, just like in an improv skit. Shows like Dimension 20 on Dropout.tv demonstrated how hilarious and engaging DnD could be with a bit of spontaneity and a lot of laughter.</p><p>Since then, I have done 'yes, and...' to whatever came my way - involving creating and refining the character through adventures. I accepted whatever was happening in the scene and built on it. Get ambushed by goblins while trying to buy groceries? Yes, I guess my character is going to find out whether or not they're dangerous with a loaf of bread as a weapon!</p><p>I also adore attempting voice acting as well to add a layer of depth to characters. Giving your rogue a gravelly voice or your sorcerer a posh accent makes them more memorable and engaging. It's a lot of fun to see your friends' reactions when your meek cleric suddenly belts out a battle cry.</p><p>In the end, DnD allows you to make characters that are more than just stats on a sheet; they're living, breathing parts of a shared story. I'm very grateful that improv helped me see how I could find a way to bring these characters to life.</p>">About</li>
                 <li class="menu-item" data-content='
                     <h2>Contact Us</h2>
-                    <form action="send_email.php" method="POST" class="contact-form">
+                    <form id="contact-form" action="send_email.php" method="POST" class="contact-form">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
                         <label for="email">Email:</label>
@@ -273,6 +285,7 @@
                         <textarea id="message" name="message" rows="6" required></textarea>
                         <button type="submit">Send Message</button>
                     </form>
+                    <div id="response-message" class="response-message"></div>
                 '>Contact</li>
             </ul>
         </div>
@@ -286,11 +299,11 @@
                         <!-- Main content will be populated here -->
                         <h2>Welcome to Valhalla of 5e!</h2>
                         <p>This is the Hall of Fame for my most legendary D&D characters, those who survived epic campaigns and crazy adventures worthy of eternal glory. Feel free to adopt these heroes (or their quirky traits) for your own epic quests. Enjoy the tales and get inspired!</p>
-<!--                         <div class="image-container">
+                         <div class="image-container">
                             <img src="https://i.imgur.com/ADQCS2e.jpg" alt="Image 1">
                             <img src="https://i.imgur.com/CvJSQYN.jpg" alt="Image 2">
                             <img src="https://i.imgur.com/uZjRNku.jpg" alt="Image 3">
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
