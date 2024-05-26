@@ -61,6 +61,7 @@ a:hover {
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 .header {
@@ -129,6 +130,7 @@ a:hover {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .profile-image-token {
@@ -157,7 +159,7 @@ a:hover {
 
 .flex-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     margin-top: 20px;
 }

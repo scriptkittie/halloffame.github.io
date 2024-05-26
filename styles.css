@@ -1,5 +1,6 @@
 body {
     font-family: 'IM Fell English SC', serif;
+    font-size: 1vw;
     margin: 0;
     padding: 0;
     background: url('https://i.imgur.com/1e4IKP5.jpg') no-repeat center center fixed;
@@ -39,19 +40,24 @@ p {
 .content-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 2vw;
     width: 80%;
-    max-width: 1200px;
+    height: 65%;
     margin: auto;
     position: relative; /* Ensure positioning context for the dice image */
 }
 
-.menu-container {
-    background-color: rgba(40, 70, 56, 0.8);
-    width: 240px; 
+.content {
     display: flex;
     flex-direction: column;
-    padding: 10px; 
-    height: 376px;
+}
+
+.menu-container {
+    background-color: rgba(40, 70, 56, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 21%;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative; 
@@ -114,11 +120,6 @@ p {
     width: 75%; /* Rest of the screen */
     display: flex;
     flex-direction: column; /* Ensure header and content container stack vertically */
-}
-
-.header-container {
-    display: flex;
-    flex-direction: column;
     flex-grow: 1;
     justify-content: flex-start; /* Align the header and content container to the start */
     align-items: center; /* Center the contents horizontally */
@@ -126,12 +127,10 @@ p {
 }
 
 .dice-image {
-    width: 120px; /* Adjusted size for the dice image */
+    width: 9vw; /* Adjusted size for the dice image */
     height: auto;
     position: absolute;
-    top: 60px; /* Adjust this value to control the spacing */
-    left: 58%;
-    transform: translateX(-50%);
+    top: -10vw;
 }
 
 .header {
@@ -146,8 +145,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     box-sizing: border-box; 
-    position: relative; 
-    overflow: hidden;
+    position: relative;
     border: 6px double #88A28D; /* Outer border color */
     border-color: #88A28D #2B4D3E;
 }
@@ -159,17 +157,18 @@ p {
 
 .content-container {
     background-color: rgba(50, 50, 50, 0.9);
-    width: 100%; 
+    width: 100%;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     box-sizing: border-box; 
     flex-grow: 1; 
     overflow-y: auto; 
-    position: relative; 
-    height: 500px; 
+    position: relative;
     border: 6px double #1F3C2F; /* Outer border color */
     border-color: #1F3C2F #10291C;
+    scrollbar-width: thin; /* Firefox: Thin scrollbar */
+    scrollbar-color: rgba(30, 30, 30, 0.9) rgba(50, 50, 50, 0.7); /* Firefox: Thumb and track colors */
 }
 
 .image-container {
@@ -181,8 +180,8 @@ p {
 }
 
 .image-container img {
-    max-width: 120px; /* Adjust this value to change the image size */
-    height: auto; /* Maintain aspect ratio */
+    width: 7vw; /* Adjust this value to change the image size */
+    height: 8vw; /* Maintain aspect ratio */
     border-radius: 10px;
     margin-left: 5px; /* Adjust this value to change the space between images */
 }
@@ -232,12 +231,6 @@ p {
     border-radius: 10px; /* Rounded corners */
 }
 
-/* Firefox scrollbar styles for content-container */
-.content-container {
-    scrollbar-width: thin; /* Firefox: Thin scrollbar */
-    scrollbar-color: rgba(30, 30, 30, 0.9) rgba(50, 50, 50, 0.7); /* Firefox: Thumb and track colors */
-}
-
 .content-container p {
     text-indent: 2em; /* Indent the first line of each paragraph */
 }
@@ -247,7 +240,6 @@ p {
     display: flex;
     justify-content: space-between;
     gap: 10px; /* Adjust the gap between images as needed */
-    margin-top: 20px;
 }
 
 /* Individual character */
@@ -256,16 +248,14 @@ p {
     border: 6px double black; /* Black double border */
     border-radius: 10px; /* Optional: Rounded corners */
     overflow: hidden;
-    flex: 1; /* Allow the images to scale within the container */
 }
 
 /* Character image */
 .character img {
     display: block;
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-height: 600px; /* Set maximum height */
-    object-fit: cover;
+    /*height: 100%; !* Maintain aspect ratio *!*/
+    object-fit: fill;
     transition: transform 0.3s ease;
 }
 
@@ -303,8 +293,6 @@ p {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 6px double #1F3C2F;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .contact-form label {
