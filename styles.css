@@ -1,6 +1,6 @@
 body {
     font-family: 'IM Fell English SC', serif;
-    font-size: 1vw;
+    font-size: clamp(16px, 2vw, 24px);
     margin: 0;
     padding: 0;
     background: url('https://i.imgur.com/1e4IKP5.jpg') no-repeat center center fixed;
