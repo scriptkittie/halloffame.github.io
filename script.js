@@ -1,33 +1,65 @@
-document.querySelectorAll('.menu-item').forEach(item => {
-    item.addEventListener('click', function() {
-        const content = document.getElementById('content');
-        const header = document.querySelector('.header h1');
-        
-        // Update the main content
-        content.innerHTML = this.getAttribute('data-content');
-        
-        // Update the header text
-        header.textContent = this.textContent;
-
-        // Check if the new content includes the contact form
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            addFormSubmissionHandler();
+document.addEventListener("DOMContentLoaded", function() {
+    // Load content based on the URL hash if present
+    if (window.location.hash) {
+        const target = window.location.hash.substring(1);
+        const menuItem = document.getElementById(target);
+        if (menuItem) {
+            loadContent(menuItem.getAttribute('data-content'));
+            document.getElementById('content').scrollIntoView();
         }
+    }
+    
+    // Event listener for menu items
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const content = document.getElementById('content');
+            const header = document.querySelector('.header h1');
+            
+            // Check if the item clicked is the characters menu item
+            if (this.id === 'menu-item-characters') {
+                goToCharacters();
+            } else {
+                // Update the main content
+                loadContent(this.getAttribute('data-content'));
+            }
+
+            // Update the header text
+            header.textContent = this.textContent;
+
+            // Check if the new content includes the contact form
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                addFormSubmissionHandler();
+            }
+        });
+
+        item.addEventListener('mouseover', function() {
+            const blurb = document.getElementById('blurb');
+            blurb.style.display = 'block';
+            blurb.textContent = this.getAttribute('data-content');
+            blurb.style.left = this.getBoundingClientRect().right + 'px';
+            blurb.style.top = this.getBoundingClientRect().top + 'px';
+        });
+
+        item.addEventListener('mouseout', function() {
+            document.getElementById('blurb').style.display = 'none';
+        });
     });
 
-    item.addEventListener('mouseover', function() {
-        const blurb = document.getElementById('blurb');
-        blurb.style.display = 'block';
-        blurb.textContent = this.getAttribute('data-content');
-        blurb.style.left = this.getBoundingClientRect().right + 'px';
-        blurb.style.top = this.getBoundingClientRect().top + 'px';
-    });
-
-    item.addEventListener('mouseout', function() {
-        document.getElementById('blurb').style.display = 'none';
-    });
+    // Check if the contact form is initially present on the page load
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        addFormSubmissionHandler();
+    }
 });
+
+function goToCharacters() {
+    window.location.href = 'index.html#menu-item-characters';
+}
+
+function loadContent(content) {
+    document.getElementById('content').innerHTML = content;
+}
 
 function addFormSubmissionHandler() {
     const form = document.getElementById('contact-form');
@@ -63,14 +95,6 @@ function addFormSubmissionHandler() {
         });
     });
 }
-
-// Check if the contact form is initially present on the page load
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        addFormSubmissionHandler();
-    }
-});
 
 // Smooth transition for character images
 document.querySelectorAll('.character a').forEach(link => {

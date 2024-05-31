@@ -64,6 +64,8 @@ p {
     overflow: hidden;
     border: 6px double #2F4727; /* Outer border color */
     border-color: #2F4727 #2B3A15; /* Double border color */
+    margin-bottom: 20px; /* Add margin to separate from bottom */
+    height: fit-content; /* Adjust height to fit content */
 }
 
 .menu {
@@ -87,32 +89,32 @@ p {
     background-color: #52826B;
 }
 
-/* Different hover colors for each menu item */
-.menu-item:nth-child(1):hover {
+/* Different hover colors for each menu item using new IDs */
+#menu-item-home:hover {
     background-color: #C5CEB6;
 }
-.menu-item:nth-child(2):hover {
+#menu-item-characters:hover {
     background-color: #B0A36F;
 }
-.menu-item:nth-child(3):hover {
+#menu-item-storylines:hover {
     background-color: #88A28D;
 }
-.menu-item:nth-child(4):hover {
+#menu-item-world-building:hover {
     background-color: #52826B;
 }
-.menu-item:nth-child(5):hover {
+#menu-item-artwork:hover {
     background-color: #686A30;
 }
-.menu-item:nth-child(6):hover {
+#menu-item-journal-blog:hover {
     background-color: #2F4727;
 }
-.menu-item:nth-child(7):hover {
+#menu-item-resources:hover {
     background-color: #1F3C2F;
 }
-.menu-item:nth-child(8):hover {
+#menu-item-about:hover {
     background-color: #2B3A15;
 }
-.menu-item:nth-child(9):hover {
+#menu-item-contact:hover {
     background-color: #0F220C;
 }
 
